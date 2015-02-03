@@ -13,7 +13,9 @@
     </head>
     <body>
         <div id="wrapper">
+            <header></header>
             <?php include 'login.php' ?>
+            <footer></footer>
         </div>
     </body>
 </html>

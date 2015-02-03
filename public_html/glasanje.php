@@ -30,8 +30,9 @@ if(isset($_POST['logovanje'])){
         <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     </head>
     <body>
-        <div id="wrapper">            
-        <div class="shade"></div>
+        <div id="wrapper">   
+            <header></header>
+            <div class="shade"></div>
             <a href="pocetna.php">Početna strana</a>
             <h1>Zdravo, <?php echo user_name_by_id($conn,$user_id) ?> glasaj za filmove</h1>            
             <div class="player">
@@ -48,6 +49,7 @@ if(isset($_POST['logovanje'])){
                     </div>
                 </form>
             </div>
+            <footer></footer>
         </div>        
     </body>
 </html>

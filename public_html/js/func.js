@@ -1,10 +1,22 @@
+/**
+ * adding class visible to password input tag
+ */
+function addVisibility() {
+    document.getElementById("password").className += " visible";        
+    }
+
+window.onload =setTimeout(function()
+    {
+        document.getElementById("logovanje").addEventListener( 'click' , addVisibility );
+    }
+, 1200 );
+
 $( function() {
     $( '#cd-dropdown' ).dropdown( {
             gutter : 5,
             stack : false,
             slidingIn : 100
     } );
-
 });
 //animations for trailer
 $(document).ready(function(){
@@ -45,11 +57,6 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.tooltip').tooltipster({
         contentAsHTML: true
-    });
-});
-$(document).ready(function() {
-    $(".cd-active.cd-dropdown ul").click(function(){
-        $("#password").addClass("visible");
     });
 });
 

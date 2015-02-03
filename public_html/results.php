@@ -19,6 +19,7 @@ $user_id = $_GET['user'];}
     </head>
     <body>
         <div id="wrapper">
+            <header></header>
             <a href="pocetna.php">Početna strana</a>
             <h1>Ovo su rezultati glasanja</h1>
             <a href="results.php?user=1">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,1)?></a><br>
@@ -76,6 +77,7 @@ $user_id = $_GET['user'];}
                 }
                 ?>
             </div>
+            <footer></footer>
         </div>
     </body>
 </html>
