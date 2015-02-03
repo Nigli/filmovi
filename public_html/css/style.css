@@ -1,0 +1,303 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 20, 2014, 1:56:23 PM
+    Author     : Glisovic
+*/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+/*    background-image: url("../pictures/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background-color: #F8F1E9;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #A8A39D;
+    padding: 0px;
+    margin: 0px;
+}
+a {
+    color: #555;
+    text-decoration: none;
+}
+a:hover {
+    color: #9A1610;
+    text-decoration: none;
+}
+#wrapper {
+    padding: 0px;
+    margin: 0px auto;
+    width: 960px;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.row, .row_title {
+    margin: 1px auto;
+    width: 700px;
+    background: #fff;
+    color: #999;
+    padding: 10px 0px 4px 10px;
+    overflow:hidden;
+}
+.row_title {
+    padding-bottom: 10px;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    background-image: url('../pictures/info.png');
+    float: left;
+    cursor: help;
+}
+.title {
+    float: left;
+    width: 380px;
+    cursor: default;
+    margin-left: 10px;
+}
+.rating_vote, .trailer, .imdb_rating, .result  {
+    float:left;
+    margin-left: 30px;	
+}
+.rating_vote {
+    width: 40px;
+    text-align:center;
+    background: #fff;
+    display: block;
+    padding: 0 auto;
+    border:1px solid #999;
+    color: #999;
+}
+.trailer {
+    width: 90px;
+    border: none;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    cursor:pointer;
+    color: #999;
+    background-color: #fff;
+    font-size: 15px;
+}
+.imdb_rating {
+    width: 50px;
+}
+.imdbRatingStyle4 {
+    border-radius: 0%;
+}
+.submits {
+    margin: 10px auto;
+    width: 700px;
+    overflow: hidden;	
+}
+#submit {
+    width: 70%;
+    border:none;
+    padding: 10px;
+    color: #999;
+    background: #fff;
+    text-align:center;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 20px;
+    cursor:pointer;
+    float:right;
+    height: 50px;
+}
+#reset {
+    width: 29%;
+    border:none;
+    padding: 10px;
+    color: #999;
+    background: #fff;
+    text-align:center;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 15px;
+    cursor:pointer;
+    float:left;
+    height: 50px;
+}
+#submit:hover, #reset:hover, .submit_admin:hover, .delete_admin:hover, .user_submit:hover, .trailer_stop_button:hover,  .cd-submit:hover{
+    color: #fff;
+    background: #9A1610;    
+}
+.imdbRatingPlugin:hover,.trailer:hover {
+    color: #9A1610;
+}
+.main{
+    width: 100%;
+    max-width: 960px;
+    margin: 100px auto;
+    position: relative;
+    padding: 0px;
+}
+.main h3 {
+    width:700px;
+    margin: 10px auto 10px;
+}
+.row_admin, .raw_user {	
+    margin: 1px auto;
+    width: 700px;
+    background: #fff;
+    padding: 10px 0px 10px 0px;
+    overflow:hidden;
+}
+.fleft {
+    float: left;
+    width: 49%;
+    min-width: 300px;
+}
+.imdb_admin, .movie_name_admin, .submit_admin, .delete_admin, .user_name, .user_submit{
+    background: #fff;
+    color: #999;
+    border:none;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.imdb_admin {
+    width: 70px;
+}
+.movie_name_admin {
+    width: 400px;
+}
+.submit_admin, .delete_admin, .user_submit {
+    cursor: pointer;
+    float: right;
+    margin-left:10px;
+    padding-right: 10px;
+}
+.movie_insert, .user_insert , .raw_user  {
+    width:700px;
+    margin: 1px auto;
+    overflow:hidden;
+}
+.user_name {
+    width: 470px;
+}
+.user_name:focus, .imdb_admin:focus, .movie_name_admin:focus {
+    color: #fff;
+    background: #9A1610;   
+}
+.result {
+    width: 40px;
+    float: right;
+    margin-right: 30px;
+    text-align: center;
+}
+.player {
+    position: fixed;
+    z-index: 5;
+    width: 800px;
+    margin: 80px;
+    padding: 40px;
+    background-color: #fff;
+    display: none;
+}
+.player #ytplayer {
+    margin: 0 auto;    
+    display: block;
+}
+.player .trailer_stop_button {
+    width: 70px;
+    height: 40px;
+    margin: 30px auto 0px auto;
+    display: block;    
+    width: 90px;
+    border: none;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 20px;
+    cursor:pointer;
+}
+.shade {
+    background: rgba(55, 58, 71, 0.9);
+    background-repeat: repeat-y;    
+    position: fixed;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-backface-visibility: hidden;
+    z-index: 1; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.visible {
+    display: block;
+}
+.row_selected, .row_selected>.trailer, .row_selected>.rating_vote {    
+    background: #999;
+    color: #fff;
+}
+.row_selected .trailer:hover {
+    color:#9A1610;
+}
+.row_selected .rating_vote {
+    border: 1px solid #fff;
+}
+.row_selected .imdbRatingPlugin:hover{
+    color:#9A1610;
+    background: #999;
+}
+.row_selected .icon {
+    background-image: url('../pictures/infolight.png');
+}
+.anim_open, .anim_close {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.anim_open {        
+    -webkit-animation-name: anim-open;
+    animation-name: anim-open;
+}
+.anim_close {
+    -webkit-animation-name: anim-close;
+    animation-name: anim-close;
+}
+@-webkit-keyframes anim-close {
+    0% { opacity: 1; }
+    100% { opacity: 0; -webkit-transform: scale3d(0.9, 0.9, 1); }
+}
+@keyframes anim-close {
+    0% { opacity: 1; }
+    100% { opacity: 0; -webkit-transform: scale3d(0.9, 0.9, 1); transform: scale3d(0.9, 0.9, 1); }
+}
+@-webkit-keyframes anim-open {
+    0% { opacity: 0; -webkit-transform: scale3d(1.1, 1.1, 1); }
+    100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); }
+}
+
+@keyframes anim-open {
+	0% { opacity: 0; -webkit-transform: scale3d(1.1, 1.1, 1); transform: scale3d(1.1, 1.1, 1); }
+	100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+}
+@media screen and (max-width: 730px){
+    .fleft {
+            width: 100%;
+            float: none;
+            text-align: center;
+    }
+}
