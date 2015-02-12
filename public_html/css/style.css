@@ -1,12 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Nov 20, 2014, 1:56:23 PM
-    Author     : Glisovic
-*/
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 *,
@@ -41,26 +32,21 @@ a:hover {
     margin: 0px auto;
     width: 960px;
 }
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
 .row, .row_title {
     margin: 1px auto;
-    width: 700px;
     background: #fff;
     color: #999;
     padding: 10px 0px 4px 10px;
     overflow:hidden;
+}
+.main{
+    width: 700px;
+    margin: 100px auto;
+    position: relative;
+    padding: 0px;
+}
+.main h3 {
+    margin: 10px auto 10px;
 }
 .row_title {
     padding-bottom: 10px;
@@ -144,28 +130,12 @@ a:hover {
 .imdbRatingPlugin:hover,.trailer:hover {
     color: #9A1610;
 }
-.main{
-    width: 100%;
-    max-width: 960px;
-    margin: 100px auto;
-    position: relative;
-    padding: 0px;
-}
-.main h3 {
-    width:700px;
-    margin: 10px auto 10px;
-}
 .row_admin, .raw_user {	
     margin: 1px auto;
     width: 700px;
     background: #fff;
     padding: 10px 0px 10px 0px;
     overflow:hidden;
-}
-.fleft {
-    float: left;
-    width: 49%;
-    min-width: 300px;
 }
 .imdb_admin, .movie_name_admin, .submit_admin, .delete_admin, .user_name, .user_submit{
     background: #fff;
@@ -289,15 +259,7 @@ a:hover {
     0% { opacity: 0; -webkit-transform: scale3d(1.1, 1.1, 1); }
     100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); }
 }
-
 @keyframes anim-open {
 	0% { opacity: 0; -webkit-transform: scale3d(1.1, 1.1, 1); transform: scale3d(1.1, 1.1, 1); }
 	100% { opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
-}
-@media screen and (max-width: 730px){
-    .fleft {
-            width: 100%;
-            float: none;
-            text-align: center;
-    }
 }

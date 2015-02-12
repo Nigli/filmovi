@@ -39,7 +39,7 @@ if(isset($_POST['logovanje'])){
                     <iframe id="ytplayer" width="720" height="405" frameborder="0" allowfullscreen></iframe>
                     <button class="trailer_stop_button" onclick="stopVideo()" type="button">Close</button>
             </div>
-            <div class="main clearfix">
+            <div class="main">
                 <form action="ratings_insert.php" method="post" id="glasanje">
                     <input type="hidden" name="user_id" value="<?php echo $user_id ?>"/>
                     <?php include 'movie_list_user.php' ?>            

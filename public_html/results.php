@@ -26,7 +26,7 @@ $user_id = $_GET['user'];}
             <a href="results.php?user=2">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,2)?></a><br>
             <a href="results.php?user=3">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,3)?></a><br>
             <a href="results.php">Vidi ukupne rezultate</a>
-            <div class="main clearfix">
+            <div class="main">
                 <div class="row_title">
                     <div class="title">Ime filma</div>
                     <div class="result">Ocena</div>

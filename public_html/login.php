@@ -1,4 +1,4 @@
-<div class="main clearfix">
+<div class="main">
     <form action="glasanje.php" method="post" id="logovanje" >
         <select name="logovanje" id="dropdown" class="select" >
             <option value="-1" selected="">Izaberite korisnika</option>
