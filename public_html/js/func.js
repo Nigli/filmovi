@@ -12,7 +12,7 @@ window.onload =setTimeout(function()
 , 1200 );
 
 $( function() {
-    $( '#cd-dropdown' ).dropdown( {
+    $( '#dropdown' ).dropdown( {
             gutter : 5,
             stack : false,
             slidingIn : 100

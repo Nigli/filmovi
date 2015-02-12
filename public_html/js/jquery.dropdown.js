@@ -56,7 +56,7 @@
 			this.size = { width : this.dd.width(), height : this.dd.height() };
 			
 			var elName = this.$el.attr( 'name' ), elId = this.$el.attr( 'id' ),
-				inputName = elName !== undefined ? elName : elId !== undefined ? elId : 'cd-dropdown-' + ( new Date() ).getTime();
+				inputName = elName !== undefined ? elName : elId !== undefined ? elId : 'dropdown' + ( new Date() ).getTime();
 
 			this.inputEl = $( '<input type="hidden" name="' + inputName + '" value="' + value + '"></input>' ).insertAfter( this.selectlabel );
 			
@@ -94,7 +94,7 @@
 
 			this.listopts = $( '<ul/>' ).append( optshtml );
 			this.selectlabel = $( '<span/>' ).append( selectlabel );
-			this.dd = $( '<div class="cd-dropdown"/>' ).append( this.selectlabel, this.listopts ).insertAfter( this.$el );
+			this.dd = $( '<div class="dropdown"/>' ).append( this.selectlabel, this.listopts ).insertAfter( this.$el );
 			this.$el.remove();
 
 			return value;
@@ -153,7 +153,7 @@
 		},
 		open : function() {
 			var self = this;
-			this.dd.toggleClass( 'cd-active' );
+			this.dd.toggleClass( 'active' );
 			this.listopts.css( 'height', ( this.optsCount + 1 ) * ( this.size.height + this.options.gutter ) );
 			this.opts.each( function( i ) {
 
@@ -180,7 +180,7 @@
 		close : function() {
 
 			var self = this;
-			this.dd.toggleClass( 'cd-active' );
+			this.dd.toggleClass( 'active' );
 			if( this.options.delay && Modernizr.csstransitions ) {
 				this.opts.each( function( i ) {
 					$( this ).css( { 'transition-delay' : self.options.slidingIn ? ( ( self.optsCount - 1 - i ) * self.options.delay ) + 'ms' : ( i * self.options.delay ) + 'ms' } );

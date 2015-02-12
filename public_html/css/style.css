@@ -137,7 +137,7 @@ a:hover {
     float:left;
     height: 50px;
 }
-#submit:hover, #reset:hover, .submit_admin:hover, .delete_admin:hover, .user_submit:hover, .trailer_stop_button:hover,  .cd-submit:hover{
+#submit:hover, #reset:hover, .submit_admin:hover, .delete_admin:hover, .user_submit:hover, .trailer_stop_button:hover,  .submit:hover{
     color: #fff;
     background: #9A1610;    
 }
