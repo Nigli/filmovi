@@ -12,10 +12,11 @@
         <link href="css/style.css" type="text/css" rel="stylesheet"> 
     </head>
     <body>
-        <div id="wrapper">
-            <header></header>
-            <?php include 'login.php' ?>
-            <footer></footer>
+        <header>
+        </header>
+        <div id="wrapper">            
+            <?php include 'login.php' ?>            
         </div>
+        <footer></footer>
     </body>
 </html>

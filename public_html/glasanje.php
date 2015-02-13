@@ -30,11 +30,14 @@ if(isset($_POST['logovanje'])){
         <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     </head>
     <body>
-        <div id="wrapper">   
-            <header></header>
-            <div class="shade"></div>
-            <a href="pocetna.php">Početna strana</a>
-            <h1>Zdravo, <?php echo user_name_by_id($conn,$user_id) ?> glasaj za filmove</h1>            
+        <header>
+        </header>
+        <div id="wrapper">            
+            <nav>
+                <a href="pocetna.php">Početna strana</a>
+                <h1>Zdravo, <?php echo user_name_by_id($conn,$user_id) ?> glasaj za filmove</h1>
+            </nav>
+            <div class="shade"></div>         
             <div class="player">
                     <iframe id="ytplayer" width="720" height="405" frameborder="0" allowfullscreen></iframe>
                     <button class="trailer_stop_button" onclick="stopVideo()" type="button">Close</button>
@@ -49,7 +52,7 @@ if(isset($_POST['logovanje'])){
                     </div>
                 </form>
             </div>
-            <footer></footer>
-        </div>        
+        </div>
+        <footer></footer>  
     </body>
 </html>

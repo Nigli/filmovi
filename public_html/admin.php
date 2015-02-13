@@ -14,17 +14,20 @@
         <link href="css/style.css" type="text/css" rel="stylesheet"> 
     </head>
     <body>
-        <div id="wrapper"> 
-            <header></header>
-            <a href="pocetna.php">Pocetna strana</a>
-            <h1>Zdravo Admine!</h1>
+        <header>
+        </header>
+        <div id="wrapper">            
+            <nav>
+                <a href="pocetna.php">Pocetna strana</a>
+                <h1>Zdravo Admine!</h1>
+            </nav>
             <div class="main">
                 <?php            
                 include 'user_list.php';
                 include 'movie_list_admin.php';            
                 ?>
-            </div>
-            <footer></footer>
+            </div>            
         </div>
+        <footer></footer>
     </body>
 </html>

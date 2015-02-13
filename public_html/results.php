@@ -18,14 +18,17 @@ $user_id = $_GET['user'];}
         <link href="css/style.css" type="text/css" rel="stylesheet"> 
     </head>
     <body>
-        <div id="wrapper">
-            <header></header>
-            <a href="pocetna.php">Početna strana</a>
-            <h1>Ovo su rezultati glasanja</h1>
-            <a href="results.php?user=1">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,1)?></a><br>
-            <a href="results.php?user=2">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,2)?></a><br>
-            <a href="results.php?user=3">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,3)?></a><br>
-            <a href="results.php">Vidi ukupne rezultate</a>
+        <header>
+        </header>
+        <div id="wrapper">            
+            <nav>
+                <a href="pocetna.php">Početna strana</a>
+                <h1>Ovo su rezultati glasanja</h1>
+                <a href="results.php?user=1">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,1)?></a><br>
+                <a href="results.php?user=2">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,2)?></a><br>
+                <a href="results.php?user=3">Vidi samo rezultate za korisnika <?php echo user_name_by_id($conn,3)?></a><br>
+                <a href="results.php">Vidi ukupne rezultate</a>
+            </nav>
             <div class="main">
                 <div class="row_title">
                     <div class="title">Ime filma</div>
@@ -77,7 +80,7 @@ $user_id = $_GET['user'];}
                 }
                 ?>
             </div>
-            <footer></footer>
         </div>
+        <footer></footer>
     </body>
 </html>

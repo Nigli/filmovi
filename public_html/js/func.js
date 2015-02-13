@@ -68,3 +68,19 @@ $(document).ready(function() {
 //        };
 //    });
 //});
+//
+//footer animation on #wrapper mouseenter
+/*
+$(document).ready(function(){
+    $('#wrapper')
+    .mouseenter(function(){
+        $('footer').animate({
+                height:'20px'
+            },600);
+    })
+    .mouseleave(function(){
+        $('footer').animate({
+                height:'100px'
+            },600);
+    });
+});*/
