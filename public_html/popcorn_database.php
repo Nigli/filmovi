@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'config.php';
 //funkcija za vracanje niza iz fajla
 $bookmarks = file("C:\Users\Glisovic\AppData\Local\Popcorn-Time\data\bookmarks.db");
 //petlja za vracanje vrednosti $imdb_id iz niza i vracanje $movie_name preko obdbapi.com i slanje upita za ubacivanje vrednosti u bazu
@@ -31,12 +31,7 @@ foreach($bookmarks as $red){
     $end_trailer = '&feature';
     $trailer_id = getBetween($info_trailer,$start_trailer,$end_trailer);
     if (substr($imdb_id,0,1) == "t") {
-        //adding movies 
-        $upit="INSERT INTO listafilmova (imdb_id,name,youtube_id,year,runtime,director,actors,poster) VALUES('$imdb_id','$movie_name','$trailer_id','$movie_year','$movie_runtime','$movie_director','$movie_actors','$movie_poster')";
-        //$upit="UPDATE listafilmova SET youtube_id='$trailer_id' WHERE imdb_id='$imdb_id'";
-        $insertMovie = mysqli_query($conn,$upit);
-        //echo "name: {$movie_name}, year: {$movie_year}, runtime: {$movie_runtime}, director: {$movie_director}, actors: {$movie_actors}, poster: {$movie_poster}<br>";
+        Listafilmova::InsertMovie($imdb_id,$movie_name,$trailer_id,$movie_year,$movie_runtime,$movie_director,$movie_actors,$movie_poster);
     }
-    //echo "promenjenih redova".mysqli_affected_rows($conn);
 }
-redirect_to('admin.php');
+redirect_to('pages/admin.php');

@@ -20,11 +20,11 @@ class Users{
 	//inserts NAME into USERS table
 	public static function InsertUser($name){
 		$db = Conn::GetConnection();
-		$ins = mysqli_query($db,"INSERT INTO users (name) VALUES('$name')");
+		mysqli_query($db,"INSERT INTO users (name) VALUES('$name')");
 	}	
 	//deletes USER by ID from USERS table
-	public static function DeleteUser($id){
+	public static function DeleteUser($name){
 		$db = Conn::GetConnection();
-		$del = mysqli_query($db,"DELETE FROM users WHERE id='$id'");
+		mysqli_query($db,"DELETE FROM users WHERE name='$name'");
 	}
 }

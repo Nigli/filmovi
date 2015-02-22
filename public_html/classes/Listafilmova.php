@@ -18,19 +18,19 @@ class Listafilmova{
 		}
 	}
 	//inserts IMDB ID and NAME into LISTAFILMOVA table
-	public static function InsertMovieShort($imdb_id,$name){
+	public static function InsertMovieShort($imdb_id,$movie_name){
 		$db = Conn::GetConnection();
-		$ins = mysqli_query($db,"INSERT INTO listafilmova (imdb_id,name) VALUES('$imdb_id','$name')");
+		mysqli_query($db,"INSERT INTO listafilmova (imdb_id,name) VALUES('$imdb_id','$movie_name')");
 	}
 	//inserts ALL into LISTAFILMOVA table
 	public static function InsertMovie($imdb_id,$movie_name,$trailer_id,$movie_year,$movie_runtime,$movie_director,$movie_actors,$movie_poster){
 		$db = Conn::GetConnection();
-		$ins = mysqli_query($db,"INSERT INTO listafilmova (imdb_id,name,youtube_id,year,runtime,director,actors,poster) VALUES('$imdb_id','$movie_name','$trailer_id','$movie_year','$movie_runtime','$movie_director','$movie_actors','$movie_poster')");
+		mysqli_query($db,"INSERT INTO listafilmova (imdb_id,name,youtube_id,year,runtime,director,actors,poster) VALUES('$imdb_id','$movie_name','$trailer_id','$movie_year','$movie_runtime','$movie_director','$movie_actors','$movie_poster')");
 	}
 	//deletes MOVIE by IMDB ID from LISTAFILMOVA table
 	public static function DeleteMovie($imdb_id){
 		$db = Conn::GetConnection();
-		$del = mysqli_query($db,"DELETE FROM listafilmova WHERE id='$imdb_id'");
+		mysqli_query($db,"DELETE FROM listafilmova WHERE imdb_id='$imdb_id'");
 	}
 	//get ALL by IMDB ID from LISTAFILMOVA table
 	public static function GetAllFromMoviesByIMDBId($imdb_id){

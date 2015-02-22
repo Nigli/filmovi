@@ -1,9 +1,8 @@
-<?php require 'function.php';
+<!--used for pages/admin.php-->
+
+<?php require 'config.php';
 if(isset($_POST['delete'])){
     $imdb_id=$_POST['imdb_id'];
-    $movie_name=$_POST['movie_name'];
-    //deleting movie  
-    $upit="DELETE FROM listafilmova WHERE imdb_id='$imdb_id'";
-    $deleteMovie = mysqli_query($conn,$upit);
+    Listafilmova::DeleteMovie($imdb_id);
 }
-redirect_to('admin.php');
+redirect_to('pages/admin.php');

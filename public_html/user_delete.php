@@ -1,9 +1,8 @@
-<?php require 'function.php';
+<!--used for pages/admin.php-->
+
+<?php require 'config.php';
 if(isset($_POST['delete'])){
-    $id=$_POST['id'];
     $name=$_POST['name'];
-    //deleting user    
-    $upit="DELETE FROM users WHERE id='$id'";
-    $deleteUser = mysqli_query($conn,$upit);
+    Users::DeleteUser($name);
 }
-redirect_to('admin.php');
+redirect_to('pages/admin.php');
