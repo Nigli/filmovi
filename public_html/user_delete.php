@@ -4,6 +4,6 @@ if(isset($_POST['delete'])){
     $name=$_POST['name'];
     //deleting user    
     $upit="DELETE FROM users WHERE id='$id'";
-    $insertMovie = mysqli_query($conn,$upit);
+    $deleteUser = mysqli_query($conn,$upit);
 }
 redirect_to('admin.php');

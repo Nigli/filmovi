@@ -4,6 +4,6 @@ if(isset($_POST['delete'])){
     $movie_name=$_POST['movie_name'];
     //deleting movie  
     $upit="DELETE FROM listafilmova WHERE imdb_id='$imdb_id'";
-    $insertMovie = mysqli_query($conn,$upit);
+    $deleteMovie = mysqli_query($conn,$upit);
 }
 redirect_to('admin.php');

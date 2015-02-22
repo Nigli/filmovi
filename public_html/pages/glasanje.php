@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require '../config.php';
 if(isset($_POST['logovanje'])){   
     $user_id = $_POST["logovanje"];
         if ($user_id=='admin') {
@@ -13,7 +13,7 @@ if(isset($_POST['logovanje'])){
 <!DOCTYPE html>
 <html>
     <head>        
-        <?php include 'head.php'; ?>
+        <?php include '../head.php'; ?>
     </head>
     <body>
         <header>
@@ -21,14 +21,14 @@ if(isset($_POST['logovanje'])){
         <div id="wrapper">
             <nav>
                 <a href="pocetna.php">Početna strana</a>
-                <h1>Zdravo, <?php echo user_name_by_id($conn,$user_id) ?> glasaj za filmove</h1>
+                <h1>Zdravo, <?php echo Users::GetUserNameById($user_id) ?> glasaj za filmove</h1>
             </nav>
             <div class="shade"></div>
-            <?php include 'youtube_player.php'; ?>
+            <?php include '../youtube_player.php'; ?>
             <div class="main">
-                <form action="ratings_insert.php" method="post" id="glasanje">
+                <form action="../ratings_insert.php" method="post" id="glasanje">
                     <input type="hidden" name="user_id" value="<?php echo $user_id ?>"/>
-                    <?php include 'movie_list_user.php' ?>            
+                    <?php include '../movie_list_user.php' ?>            
                     <div class="submits">
                         <input type="submit" name="submit" id="submit" value="Glasaj"/>
                         <input type="reset" name="reset" id="reset" value="Resetuj unos"/>

@@ -5,4 +5,4 @@ if(isset($_POST['name'])){
     $upit="INSERT INTO users (name) VALUES('$name')";
     $insertUser = mysqli_query($conn,$upit);
 }
-redirect_to('admin.php');
+redirect_to('pages/admin.php');

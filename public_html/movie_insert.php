@@ -6,4 +6,4 @@ if(isset($_POST['imdb_id'])){
     $upit="INSERT INTO listafilmova (imdb_id,name) VALUES('$imdb_id','$movie_name')";
     $insertMovie = mysqli_query($conn,$upit);
 }
-redirect_to('admin.php');
+redirect_to('pages/admin.php');

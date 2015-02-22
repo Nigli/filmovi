@@ -1,8 +1,8 @@
-<?php require 'function.php'; ?>
+<?php require '../config.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <?php include 'head.php'; ?>
+        <?php include '../head.php'; ?>
     </head>
     <body>
         <header>
@@ -14,8 +14,8 @@
             </nav>
             <div class="main">
                 <?php            
-                include 'user_list.php';
-                include 'movie_list_admin.php';            
+                include '../user_list.php';
+                include '../movie_list_admin.php';            
                 ?>
             </div>            
         </div>
