@@ -10,11 +10,16 @@ window.onload =setTimeout(function()
     }
 , 1200 );
 */
+
 $( function() {
     $( '#dropdown' ).dropdown( {
             gutter : 5,
             stack : false,
-            slidingIn : 100
+            slidingIn : 100,
+            onOptionSelect : function(opt) {
+               $('input[name=user]').val(opt.attr("data-value"));
+               $("#form").submit();
+            }
     } );
 });
 //animations for trailer

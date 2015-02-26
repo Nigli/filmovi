@@ -1,7 +1,7 @@
 <?php
 require '../config.php';
-if(isset($_POST['logovanje'])){   
-    $user_id = $_POST["logovanje"];
+if(isset($_POST['user'])){   
+    $user_id = $_POST["user"];
         if ($user_id=='admin') {
             redirect_to('admin.php');
         }elseif($user_id==-1){

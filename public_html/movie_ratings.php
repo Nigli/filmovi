@@ -1,6 +1,7 @@
 <?php
     if ((isset($_GET['user']))&&(is_numeric($_GET['user']))) {
-    $user_id = $_GET['user'];
+    $user_id = $_GET['user'];    
+    echo "<span id='selected_user'>".Users::GetUserNameById($user_id)."'s votes</span>";
     if(null !== (Movierankings::GetTop10FromMovieRankByUserId($user_id))){
         foreach(Movierankings::GetTop10FromMovieRankByUserId($user_id) as $k=>$movierank){        
             foreach (Listafilmova::GetAllFromMoviesByIMDBId($movierank->imdb_id) as $m=>$movie){            
@@ -20,6 +21,7 @@
         <?php
     }
 }else {
+    echo "<span id='selected_user'>Total results</span>";
     foreach(Movierankings::GetTop10FromMovieRank() as $k=>$movierank){
         foreach(Listafilmova::GetAllFromMoviesByIMDBId($movierank->imdb_id) as $m=>$movie){
             ?>
