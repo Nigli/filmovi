@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET['user'])) {
+    if ((isset($_GET['user']))&&(is_numeric($_GET['user']))) {
     $user_id = $_GET['user'];
     if(null !== (Movierankings::GetTop10FromMovieRankByUserId($user_id))){
         foreach(Movierankings::GetTop10FromMovieRankByUserId($user_id) as $k=>$movierank){        
@@ -15,7 +15,7 @@ if (isset($_GET['user'])) {
     }else {
         ?>
         <div class="row">
-            <div class="title">Korisnik nije glasao</div>
+            <div class="title">User haven't voted yet</div>
         </div>
         <?php
     }

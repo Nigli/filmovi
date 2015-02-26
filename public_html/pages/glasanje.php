@@ -20,8 +20,8 @@ if(isset($_POST['logovanje'])){
         </header> 
         <div id="wrapper">
             <nav>
-                <a href="pocetna.php">Početna strana</a>
-                <h1>Zdravo, <?php echo Users::GetUserNameById($user_id) ?> glasaj za filmove</h1>
+                <a href="pocetna.php">Home page</a>
+                <h1>Hello, <?php echo Users::GetUserNameById($user_id) ?> vote for movies</h1>
             </nav>
             <div class="shade"></div>
             <?php include '../youtube_player.php'; ?>
@@ -30,8 +30,8 @@ if(isset($_POST['logovanje'])){
                     <input type="hidden" name="user_id" value="<?php echo $user_id ?>"/>
                     <?php include '../movie_list_user.php' ?>            
                     <div class="submits">
-                        <input type="submit" name="submit" id="submit" value="Glasaj"/>
-                        <input type="reset" name="reset" id="reset" value="Resetuj unos"/>
+                        <input type="submit" name="submit" id="submit" value="Vote"/>
+                        <input type="reset" name="reset" id="reset" value="Reset"/>
                     </div>
                 </form>
             </div>

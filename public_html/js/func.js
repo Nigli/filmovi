@@ -1,6 +1,5 @@
-/**
- * adding class visible to password input tag
- */
+//adding class visible to password input tag
+/*
 function addVisibility() {
     document.getElementById("password").className += " visible";        
     }
@@ -10,7 +9,7 @@ window.onload =setTimeout(function()
         document.getElementById("logovanje").addEventListener( 'click' , addVisibility );
     }
 , 1200 );
-
+*/
 $( function() {
     $( '#dropdown' ).dropdown( {
             gutter : 5,

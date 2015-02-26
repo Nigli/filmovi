@@ -1,5 +1,10 @@
 <?php
 class Users{
+//        //session test
+//        function setSessions(){
+//            Session::set("id",$this->id);
+//            Session::set("name",$this->name);
+//        }
 	//get ALL from USERS table
 	public static function GetAllFromUsers(){
 		$db = Conn::GetConnection();
@@ -13,9 +18,8 @@ class Users{
 	public static function GetUserNameById($id){		
 		$db = Conn::GetConnection();
 		$res = mysqli_query($db,"SELECT name FROM users WHERE id='$id' limit 1");
-		while($rw = mysqli_fetch_object($res)){
-			return $rw->name;
-		}
+		$rw = mysqli_fetch_object($res);
+                return $rw->name;
 	}
 	//inserts NAME into USERS table
 	public static function InsertUser($name){
