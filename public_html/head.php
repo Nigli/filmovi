@@ -14,6 +14,11 @@
 <!-- css and js for tooltip-->
 <link rel="stylesheet" type="text/css" href="../css/tooltipster.css" />
 <script type="text/javascript" src="../js/jquery.tooltipster.min.js"></script>
+<!-- css and js for admin popcorntime spinner -->
+<link rel="stylesheet" type="text/css" href="../css/spinner.css" />
+<script src="../js/classie.js"></script>
+<!-- css for font-awesome -->
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
 <!-- css and js entire project -->
 <link href="../css/style.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="../js/func.js"></script>

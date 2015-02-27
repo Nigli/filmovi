@@ -11,6 +11,6 @@
         ?>
         <option value="admin">Admin</option>
     </select>
-    <!--<input class="password" type="password" name="password" id="password" placeholder="Upišite šifru"/>-->
-<!--    <input class="submit" type="submit" name="login" id="login" value="OK"/>-->
+    <input class="password" type="password" name="password" id="password" placeholder="Insert Password"/>
+    <input class="submit" type="submit" name="login" id="login" value="OK"/>
 </form>

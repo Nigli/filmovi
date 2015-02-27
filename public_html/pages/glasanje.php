@@ -20,8 +20,8 @@ if(isset($_POST['user'])){
         </header> 
         <div id="wrapper">
             <nav>
-                <a href="pocetna.php">Home page</a>
-                <h1>Hello, <?php echo Users::GetUserNameById($user_id) ?> vote for movies</h1>
+                <a class="tooltip_home" title="Go to homepage" href="pocetna.php"><i class="fa fa-home fa-3x"></i></a>
+                <span class="hello">Hello, <?php echo Users::GetUserNameById($user_id) ?> vote for movies</span>
             </nav>
             <div class="shade"></div>
             <?php include '../youtube_player.php'; ?>

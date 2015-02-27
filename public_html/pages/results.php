@@ -12,10 +12,10 @@ $user_id = $_GET['user'];}
         </header>
         <div id="wrapper">            
             <nav>
-                <a href="pocetna.php">Home page</a>
+                <a class="tooltip_home" title="Go to homepage" href="pocetna.php"><i class="fa fa-home fa-3x"></i></a>
             </nav>
-            <div class="main">
-                <?php include"../user_ratings.php" ?>
+            <div class="main">                
+                <?php include '../user_ratings.php' ?>
                 <?php include "../movie_ratings.php" ?>
             </div>
         </div>

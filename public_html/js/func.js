@@ -11,14 +11,18 @@ window.onload =setTimeout(function()
 , 1200 );
 */
 
+//dropdown settings
 $( function() {
     $( '#dropdown' ).dropdown( {
             gutter : 5,
             stack : false,
             slidingIn : 100,
             onOptionSelect : function(opt) {
-               $('input[name=user]').val(opt.attr("data-value"));
-               $("#form").submit();
+               $('input[name=list]').val(opt.attr("data-value"));
+               $("#list").submit();
+               $("#password").addClass("visible");
+               $("#password").focus();
+               $("#login").addClass("visible");               
             }
     } );
 });
@@ -50,6 +54,7 @@ $(document).ready(function(){
     $(this).addClass("row_selected");
   });
 });
+//tooltipster function
 $(document).ready(function() {
     $('.tooltip_img').tooltipster({
         contentAsHTML: true,
@@ -63,7 +68,14 @@ $(document).ready(function() {
         contentAsHTML: true
     });
 });
-
+$(document).ready(function() {
+    $('.tooltip_home').tooltipster({
+        position: 'bottom',
+        contentAsHTML: true,
+        maxWidth: 300,
+        interactive: true
+    });
+});
 //confirm and submit
 //$(document).ready(function(){
 //    $(".delete_admin").click(function(){

@@ -20,4 +20,5 @@ foreach (Listafilmova::GetAllFromMovies() as $k=>$movies){
 <?php
 }    
 ?>
-<h3><a class="movie_list_refresh" href='../popcorn_database.php'>Osvezi listu sa PopcornTime filmovima</a></h3>
+<div id="popcorn"><a data-anim="spinner" href='../popcorn_database.php'>Refresh list with PopcornTime movies</a></div>
+<script src="../js/spinner.js"></script>

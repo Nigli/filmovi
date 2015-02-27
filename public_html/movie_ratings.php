@@ -1,7 +1,7 @@
 <?php
-    if ((isset($_GET['user']))&&(is_numeric($_GET['user']))) {
-    $user_id = $_GET['user'];    
-    echo "<span id='selected_user'>".Users::GetUserNameById($user_id)."'s votes</span>";
+    if ((isset($_GET['list']))&&(is_numeric($_GET['list']))) {
+    $user_id = $_GET['list'];    
+    echo "<span id='selected_user'>".Users::GetUserNameById($user_id)."'s votes</span>";    
     if(null !== (Movierankings::GetTop10FromMovieRankByUserId($user_id))){
         foreach(Movierankings::GetTop10FromMovieRankByUserId($user_id) as $k=>$movierank){        
             foreach (Listafilmova::GetAllFromMoviesByIMDBId($movierank->imdb_id) as $m=>$movie){            

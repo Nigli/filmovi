@@ -1,7 +1,7 @@
 <!-- used in pages/results.php-->
 
-<form action="" method="get" id="form" >
-    <select name="user" id="dropdown" class="select">
+<form action="" method="get" id="list" >
+    <select name="list" id="dropdown" class="select">
         <option value="-1" selected="">Choose user</option>
         <?php foreach (Users::GetAllFromUsers() as $k=>$user) {
         ?>            
