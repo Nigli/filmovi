@@ -37,6 +37,9 @@
 	border-left-color: #A8A39D;
 	-webkit-animation: rotation 3s linear infinite;
 	animation: rotation 3s linear infinite;
+        -webkit-box-shadow: -1px -1px 13px 6px rgba(255, 255, 255, 1);
+        -moz-box-shadow:    -1px -1px 13px 6px rgba(255, 255, 255, 1);
+        box-shadow:         -1px -1px 13px 6px rgba(255, 255, 255, 1);
 }
 
 .spinner::after {

@@ -9,7 +9,7 @@
         <?php
         }
         ?>
-        <option value="all">Total results</option>
+        <option value="0">Total results</option>
     </select>
 <!--    <input class="submit" type="submit" name="submit" id="rezultati" value="OK"/>-->
 </form>

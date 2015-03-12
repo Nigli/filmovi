@@ -48,12 +48,14 @@ a:hover {
     margin: 1px auto;
     background: #fff;
     color: #999;
-    padding: 10px 0px 4px 10px;
+    padding: 10px 10px 4px 10px;
     overflow:hidden;
 }
 nav {
     margin-top: 20px;
     overflow: hidden;
+    border-bottom: 2px solid #9A1610;
+    padding-bottom: 5px;
 }
 .tooltip_home {
     float: left;
@@ -135,7 +137,8 @@ nav {
 .submits {
     margin: 10px auto;
     width: 700px;
-    overflow: hidden;	
+    overflow: hidden;
+    display: block;
 }
 #submit {
     width: 70%;
@@ -163,23 +166,36 @@ nav {
     float:left;
     height: 50px;
 }
-#submit:hover, #reset:hover, .submit_admin:hover, .delete_admin:hover, .user_submit:hover, .trailer_stop_button:hover,  .submit:hover{
+#popcorn {
+    margin: 10px auto;
+    width: 700px;
+    border:none;
+    padding: 10px;
+    color: #999;
+    background: #fff;
+    text-align:center;
+    font-size: 14px;
+    cursor:pointer;
+    float:left;
+    height: 40px;
+}
+#submit:hover, #reset:hover, .submit_admin:hover, .user_submit:hover, .trailer_stop_button:hover,  .submit:hover, #popcorn:hover{
     color: #fff;
     background: #9A1610;    
 }
 .imdbRatingPlugin:hover,.trailer:hover {
     color: #9A1610;
 }
-.row_admin, .raw_user {	
+.raw_user {	
     margin: 1px auto;
     width: 700px;
     background: #fff;
-    padding: 10px 0px 10px 0px;
+    padding: 10px;
     overflow:hidden;
 }
 .imdb_admin, .movie_name_admin, .submit_admin, .delete_admin, .user_name, .user_submit{
-    background: #fff;
-    color: #999;
+    background: inherit;
+    color: inherit;
     border:none;
     line-height: 30px;
     padding-left: 10px;
@@ -252,6 +268,9 @@ nav {
     top: 0;
     left: 0;
     display: none;
+}
+.watched {
+    color:#9A1610;
 }
 .visible {
     display: block;

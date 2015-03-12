@@ -11,7 +11,7 @@
         <div id="wrapper">            
             <nav>
                 <a class="tooltip_home" title="Go to homepage" href="pocetna.php"><i class="fa fa-home fa-3x"></i></a>
-                <h1>Zdravo Admine!</h1>
+                <span class="hello">Zdravo Admine!</span>
             </nav>
             <div class="main">
                 <?php            

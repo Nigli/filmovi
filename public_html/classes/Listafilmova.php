@@ -1,9 +1,17 @@
 <?php
 class Listafilmova{
 	//get ALL from LISTAFILMOVA table
-	public static function GetAllFromMovies(){
+	public static function GetAllMovies(){
 		$db = Conn::GetConnection();
 		$res = mysqli_query($db,"SELECT * FROM listafilmova");
+		while($rw = mysqli_fetch_object($res)){
+			$array[]=$rw;
+		}
+		return $array;
+	}
+        public static function GetAllNotWatchedMovies(){
+		$db = Conn::GetConnection();
+		$res = mysqli_query($db,"SELECT * FROM listafilmova WHERE watched=0");
 		while($rw = mysqli_fetch_object($res)){
 			$array[]=$rw;
 		}
@@ -27,13 +35,18 @@ class Listafilmova{
 		$db = Conn::GetConnection();
 		mysqli_query($db,"INSERT INTO listafilmova (imdb_id,name,youtube_id,year,runtime,director,actors,poster) VALUES('$imdb_id','$movie_name','$trailer_id','$movie_year','$movie_runtime','$movie_director','$movie_actors','$movie_poster')");
 	}
+        //marks movie as watched
+        public static function WatchedMovie($imdb_id,$watched){
+		$db = Conn::GetConnection();
+		mysqli_query($db,"UPDATE listafilmova SET watched='$watched' WHERE imdb_id='$imdb_id'");
+	}
 	//deletes MOVIE by IMDB ID from LISTAFILMOVA table
 	public static function DeleteMovie($imdb_id){
 		$db = Conn::GetConnection();
 		mysqli_query($db,"DELETE FROM listafilmova WHERE imdb_id='$imdb_id'");
 	}
 	//get ALL by IMDB ID from LISTAFILMOVA table
-	public static function GetAllFromMoviesByIMDBId($imdb_id){
+	public static function GetAllMoviesByIMDBId($imdb_id){
 		$db = Conn::GetConnection();
 		$res = mysqli_query($db,"SELECT * FROM listafilmova WHERE imdb_id='$imdb_id'");
 		while($rw = mysqli_fetch_object($res)){

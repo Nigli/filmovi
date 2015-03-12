@@ -9,16 +9,26 @@
 <h3>Ovo je trenutna lista filmova</h3>
 <?php 
 //    while ($res=mysqli_fetch_assoc($listaFilmovaQ)){
-foreach (Listafilmova::GetAllFromMovies() as $k=>$movies){
+foreach (Listafilmova::GetAllMovies() as $k=>$movies){
     ?>
-    <form class="row_admin" action="../movie_delete.php" method="post">
+    <form class="row" action="../movie_watched.php" method="post">
             <input class="imdb_admin" type="text" readonly="" name="imdb_id" value="<?php echo $movies->imdb_id?>" />
             <input class="movie_name_admin" type="text" readonly="" name="movie_name" value="<?php echo $movies->name?>" />
 <!--                <input class="submit_admin" type="submit" name="edit" value="izmeni" />-->
-            <input class="delete_admin" type="submit" name ="delete" onClick="return confirm('Obrisati film <?php echo $movies->name?>?');" value="obriši" />
+            <?php 
+            if($movies->watched==1){
+                ?><button class="delete_admin tooltip" type="submit" name ="watched" value="0" title="Movie has been watched" onClick="return confirm('Film <?php echo $movies->name?> je vec odgledan!');"><i class="fa fa-eye fa-2x watched"></i></button>
+                <?php
+            }else{
+                ?>
+                <button class="delete_admin tooltip" type="submit" name ="watched" value="1" title="Click to confirm that movie has been watched" onClick="return confirm('Odgledan film <?php echo $movies->name?>?');"><i class="fa fa-eye fa-2x" ></i></button>
+                <?php
+            }
+            ?>
+            
     </form>        
 <?php
 }    
 ?>
-<div id="popcorn"><a data-anim="spinner" href='../popcorn_database.php'>Refresh list with PopcornTime movies</a></div>
+<div><a id="popcorn" data-anim="spinner" href='../popcorn_database.php'>Refresh list with PopcornTime movies</a></div>
 <script src="../js/spinner.js"></script>
