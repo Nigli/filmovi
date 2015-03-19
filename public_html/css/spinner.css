@@ -10,6 +10,7 @@
 	-webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
 	transform: translateX(100%) translateY(-100%) rotate(45deg);
 	pointer-events: none;
+        z-index: 2;
 }
 
 .spinner.animate {
@@ -27,6 +28,7 @@
 	border: 5px solid #fff;
 	border-radius: 50%;
 	content: '';
+        box-shadow:         -1px -1px 50px 6px rgba(255, 255, 255, 1);
 }
 
 .spinner::before {
@@ -39,7 +41,7 @@
 	animation: rotation 3s linear infinite;
         -webkit-box-shadow: -1px -1px 13px 6px rgba(255, 255, 255, 1);
         -moz-box-shadow:    -1px -1px 13px 6px rgba(255, 255, 255, 1);
-        box-shadow:         -1px -1px 13px 6px rgba(255, 255, 255, 1);
+        
 }
 
 .spinner::after {

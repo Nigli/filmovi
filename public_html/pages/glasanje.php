@@ -23,7 +23,7 @@ if(isset($_POST['user'])){
                 <a class="tooltip_home" title="Go to homepage" href="pocetna.php"><i class="fa fa-home fa-3x"></i></a>
                 <span class="hello">Hello <?php echo Users::GetUserNameById($user_id) ?>, vote for movies</span>
             </nav>
-            <div class="shade"></div>
+            <div id="shade" class="shade"></div>
             <?php include '../youtube_player.php'; ?>
             <div class="main">
                 <form action="../ratings_insert.php" method="post" id="glasanje">

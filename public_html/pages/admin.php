@@ -13,6 +13,7 @@
                 <a class="tooltip_home" title="Go to homepage" href="pocetna.php"><i class="fa fa-home fa-3x"></i></a>
                 <span class="hello">Zdravo Admine!</span>
             </nav>
+            <div id="shade" class="shade"></div>
             <div class="main">
                 <?php            
                 include '../user_list.php';

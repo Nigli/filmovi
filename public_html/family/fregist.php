@@ -27,6 +27,7 @@
                     If not, leave it as it is. DON'T UPLOAD ANYTHING :)
                     <input type="file">
                 </form>
+                <?php print_r($_POST)?>
 <!--            xxxxxxx   -->
 <!--            xxxxxxx   -->
 <!--            xxxxxxx   -->
