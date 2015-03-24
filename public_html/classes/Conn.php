@@ -7,8 +7,7 @@ class Conn{
     public static $conn;
     public static function GetConnection(){
         if(!self::$conn){
-                self::$conn = mysqli_connect(self::DBHOST,self::DBUSER,self::DBPASS,self::DB);
-                mysqli_set_charset(self::$conn,"utf8");
+            self::$conn = new PDO("mysql:dbhost=".self::DBHOST.";dbname=".self::DB.";charset=utf8",self::DBUSER,self::DBPASS);
         }
         return self::$conn;
     }	
