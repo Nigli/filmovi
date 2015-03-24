@@ -7,8 +7,7 @@
     <input class="submit_admin" type="submit" name="submit" onClick="return confirm('Uneti novi film?')" value="unesi">
 </form>
 <h3>Ovo je trenutna lista filmova</h3>
-<?php 
-//    while ($res=mysqli_fetch_assoc($listaFilmovaQ)){
+<?php
 foreach (Listafilmova::GetAllMovies() as $k=>$movies){
     ?>
     <form class="row" action="../movie_watched.php" method="post">
