@@ -5,7 +5,7 @@ if (isset($_GET['list']) && ($_GET['list'])!=0) {
         foreach(Movierankings::GetTop10FromMovieRankByUserId($user_id) as $k=>$movierank){
              ?>
             <div class="row">
-                <div class="title"><?php echo ListaFilmova::GetMovieNameByIMDBId($movierank->imdb_id)?></div>
+                <div class="title"><?php echo Listafilmova::GetMovieNameByIMDBId($movierank->imdb_id)?></div>
                 <div class="result"><?php echo $movierank->sumrating?></div>
             </div>
             <?php
@@ -21,7 +21,7 @@ if (isset($_GET['list']) && ($_GET['list'])!=0) {
     foreach(Movierankings::GetTop10FromMovieRank() as $k=>$movierank){
         ?>
         <div class="row">
-            <div class="title"><?php echo ListaFilmova::GetMovieNameByIMDBId($movierank->imdb_id)?></div>
+            <div class="title"><?php echo Listafilmova::GetMovieNameByIMDBId($movierank->imdb_id)?></div>
             <div class="result"><?php echo $movierank->sumrating?></div>
         </div>
         <?php
