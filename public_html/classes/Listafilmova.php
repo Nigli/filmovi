@@ -34,10 +34,10 @@ class Listafilmova{
 		$db = Conn::GetConnection();
                 $db->exec("INSERT INTO listafilmova (imdb_id,name,youtube_id,year,runtime,director,actors,poster) VALUES('$imdb_id','$movie_name','$trailer_id','$movie_year','$movie_runtime','$movie_director','$movie_actors','$movie_poster')");
         }
-        //marks movie as watched
-        public static function WatchedMovie($imdb_id,$watched){
+ //marks movie as watched
+ public static function WatchedMovie($imdb_id,$watched){
 		$db = Conn::GetConnection();
-                $db-exec("UPDATE listafilmova SET watched='$watched' WHERE imdb_id='$imdb_id'");
+    $db-exec("UPDATE listafilmova SET watched='$watched' WHERE imdb_id='$imdb_id'");
 	}
 	//deletes MOVIE by IMDB ID from LISTAFILMOVA table
 	public static function DeleteMovie($imdb_id){
