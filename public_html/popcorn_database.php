@@ -2,7 +2,7 @@
 require 'config.php';
 //funkcija za vracanje niza iz fajla
 $bookmarks = file("C:\Users\Glisovic\AppData\Local\Popcorn-Time\data\bookmarks.db");
-//petlja za vracanje vrednosti $imdb_id iz niza i vracanje $movie_name preko obdbapi.com i slanje upita za ubacivanje vrednosti u bazu
+//petlja za vracanje vrednosti $imdb_id iz niza i vracanje $movie_name preko obdbapi.com i slanje upita za ubacivanje vrednosti u bazu sds
 foreach($bookmarks as $row){
     $row = json_decode($row);
     if (property_exists($row, 'imdb_id')){
