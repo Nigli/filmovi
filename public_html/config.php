@@ -1,6 +1,6 @@
 <?php
 //defining application directorium
-    define("APP_DIR","D:/Nikola/programiranje/php/wamp/www/filmovi/Filmovi za gledanje/public_html/");
+    define("APP_DIR",__DIR__."/");
 //class autoload
     function __autoload($classname){
         require_once(APP_DIR."classes/{$classname}.php");
